@@ -1,7 +1,7 @@
 pipeline {
   agent any
   triggers {
-              cron(env.BRANCH_NAME == 'Develop' ? '00 1 * * *' : '')
+              cron(env.BRANCH_NAME == 'master' ? '00 1 * * *' : '')
              } 
   stages {
     stage('Checkout source from Gitlab') {
